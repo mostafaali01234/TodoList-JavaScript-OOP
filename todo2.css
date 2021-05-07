@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(120deg, #5f57d1, #c065c0);
+}
+::placeholder {
+    color: rgb(179, 179, 179);
+}
+
+/* h1 */
+
+.title{
+    text-align: center;
+    margin: 30px;
+    color: white;
+}
+
+/* container */
+
+.todo-body{
+    margin: 30px auto 0;
+    width: 800px;   
+}
+
+/* input box */
+
+.todo-body .add-box{
+    padding: 15px;
+    position: relative;
+}
+.todo-body .add-box input{
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(54, 53, 53, 0.3);
+    width: 98%;
+    color: #FFF;
+    font-size: 20px;
+    outline: none;
+}
+.todo-body .add-box .plus{
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    background-color: #FFF;
+    right: 12px;
+    border-radius: 50%;
+    line-height: 43px;
+    text-align: center;
+    color:#5f57d1;
+    cursor: pointer;
+    font-size: 38px;
+    transition: all 0.3s ease-in-out;
+}
+.todo-body .add-box .plus:hover{
+    background-color: #5f57d1;
+    color: white;
+}
+.todo-body .tasks-list {
+    padding: 15px;
+}
+
+/* tasks body */
+
+.todo-body .tasks-list > span {
+    display: block;
+    background-color: #FFF;
+    padding: 20px; 
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.todo-body .tasks-list .taskBox .delete {
+    float: right;
+    background-color: #E91E63;
+    padding: 10px 10px;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.todo-body .tasks-list .taskBox .delete:hover{
+    background-color: #6b0000;
+}
+.todo-body .tasks-list .taskBox .complete {
+    float: right;
+    background-color: #36e91e;
+    padding: 10px 10px;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: -10px;
+    transition: all 0.3s ease-in-out;
+}
+.todo-body .tasks-list .taskBox .complete:hover{
+    background-color: #1f7e13;
+}
+.todo-body .tasks-list .taskBox .complete.finish{
+    background-color: #454645;
+}
+.todo-body .tasks-list .taskBox.finish{
+    transform: scale(0.8);
+    text-decoration: line-through;
+    background-color: rgb(117, 117, 117);
+}
+
+/* Delete All & Finish All */
+
+.All {
+    overflow: hidden;
+    margin: 10px auto;
+    width: 800px;
+    font-size: 20px;
+}
+
+.All .deleteAll,
+.All .finishAll{
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    float: left;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.All .deleteAll{
+    background-color: #E91E63;
+    margin-left: 200px;
+    margin-right: 100px;
+}
+.All .deleteAll:hover{
+    background-color: #6b0000;
+}
+.All .finishAll{
+    background-color: #36e91e;
+}
+.All .finishAll:hover{
+    background-color: #1f7e13;
+}
